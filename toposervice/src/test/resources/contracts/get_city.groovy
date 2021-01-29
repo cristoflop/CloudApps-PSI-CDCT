@@ -5,7 +5,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     description "Get info from city"
     request {
-        urlPath "/api/topographicdetails/${regex(".*")}"
+        url "/api/topographicdetails/${regex(".*")}"
         method GET()
     }
     response {
@@ -14,10 +14,10 @@ Contract.make {
             contentType applicationJson()
         }
         body(
-                {
-                    id: "Madrid"
-                    landscape: "Flat"
-                }
+                [
+                        id       : "Madrid",
+                        landscape: "Flat"
+                ]
         )
     }
 }
