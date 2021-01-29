@@ -1,0 +1,23 @@
+package contracts
+
+import org.springframework.cloud.contract.spec.Contract
+
+Contract.make {
+    description "Get info from city"
+    request {
+        urlPath "/api/topographicdetails/${regex(".*")}"
+        method GET()
+    }
+    response {
+        status OK()
+        headers {
+            contentType applicationJson()
+        }
+        body(
+                {
+                    id: "Madrid"
+                    landscape: "Flat"
+                }
+        )
+    }
+}
