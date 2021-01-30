@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @AutoConfigureStubRunner(
-        ids = {"es.codeurjc.test:cdct_ejem:+:stubs:8080"},
+        ids = {"es.codeurjc.mastercloudapps:topo_get_city:+:stubs:8080"},
         stubsMode = StubsMode.LOCAL)
-class DemoApplicationTests {
+public class DemoApplicationTests {
 
     @Test
-    void verify_get_city_service() {
+    public void verify_get_city_service() {
         RestTemplate restTemplate = new RestTemplate();
 
         LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/api/topographicdetails/Recas", LandscapeResponse.class);
