@@ -74,7 +74,7 @@
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
 					<baseClassForTests>
-						es.codeurjc.test.cdct_ejem.BaseCDC
+						es.codeurjc.mastercloudapps.topo.BaseCDC
 					</baseClassForTests>
 				</configuration>
 			</plugin>
