@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DemoApplicationTests {
 
     @Test
-    void verify_book_service() {
+    void verify_get_city_service() {
         RestTemplate restTemplate = new RestTemplate();
 
         LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/api/topographicdetails/Recas", LandscapeResponse.class);
