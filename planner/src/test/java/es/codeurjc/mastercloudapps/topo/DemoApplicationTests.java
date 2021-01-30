@@ -19,7 +19,7 @@ class DemoApplicationTests {
     void verify_book_service() {
         RestTemplate restTemplate = new RestTemplate();
 
-        LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/", LandscapeResponse.class);
+        LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/api/topographicdetails/Recas", LandscapeResponse.class);
 
         assertEquals("Recas", response.getId());
         assertEquals("Flat", response.getLandscape());
