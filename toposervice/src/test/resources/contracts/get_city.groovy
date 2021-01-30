@@ -15,7 +15,7 @@ Contract.make {
         }
         body(
                 [
-                        id       : "Madrid",
+                        id       : "Recas",
                         landscape: "Flat"
                 ]
         )
