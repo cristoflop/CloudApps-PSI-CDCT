@@ -5,7 +5,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     description "Get info from city"
     request {
-        url "/api/topographicdetails/${regex(".*")}"
+        url "/api/topographicdetails/Recas"
         method GET()
     }
     response {
