@@ -5,7 +5,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     description "Get info from city"
     request {
-        url "/api/topographicdetails/Recas"
+        url "/api/topographicdetails/Madrid"
         method GET()
     }
     response {
@@ -15,7 +15,7 @@ Contract.make {
         }
         body(
                 [
-                        id       : "Recas",
+                        id       : "Madrid",
                         landscape: "Flat"
                 ]
         )

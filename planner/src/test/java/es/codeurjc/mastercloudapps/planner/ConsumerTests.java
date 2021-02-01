@@ -1,4 +1,4 @@
-package es.codeurjc.mastercloudapps.topo;
+package es.codeurjc.mastercloudapps.planner;
 
 import es.codeurjc.mastercloudapps.planner.models.LandscapeResponse;
 import org.junit.jupiter.api.Test;
@@ -11,17 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @AutoConfigureStubRunner(
-        ids = {"es.codeurjc.mastercloudapps:topo_get_city:+:stubs:8080"},
+        ids = {"jaavila2020-cflopez2020:toposervice:+:stubs:8080"},
         stubsMode = StubsMode.LOCAL)
-public class DemoApplicationTests {
+public class ConsumerTests {
 
     @Test
     public void verify_get_city_service() {
         RestTemplate restTemplate = new RestTemplate();
 
-        LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/api/topographicdetails/Recas", LandscapeResponse.class);
+        LandscapeResponse response = restTemplate.getForObject("http://localhost:8080/api/topographicdetails/Madrid", LandscapeResponse.class);
 
-        assertEquals("Recas", response.getId());
+        assertEquals("Madrid", response.getId());
         assertEquals("Flat", response.getLandscape());
     }
 
